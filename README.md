@@ -2,7 +2,7 @@
 
 `password-manager.js` is a minimalistic password manager. It can encrypt and decrypt passwords (or other text) using AES-256. Because it is written in Javascript, the code runs in your browser and does not send your data to any servers! But don't take my word for it: Check the source code! It is only 50 lines long ;) 
 
-Because `password-manager.js` uses [opengpg.js](https://github.com/openpgpjs/openpgpjs) under the hood it is compatible with other tools, which support the OpenPGP standard (like [GnuPG](https://www.gnupg.org/)). You can decrypt a file encrypted by `password-manager.js` with `GnuPG` using this command: `gpg --no-symkey-cache -o decrypted.txt -d passwords.pgp.asc`.
+Because `password-manager.js` uses [opengpg.js](https://github.com/openpgpjs/openpgpjs) under the hood it is compatible with other tools, which support the OpenPGP standard (like [GnuPG](https://www.gnupg.org/)). You can decrypt a file encrypted by `password-manager.js` with `GnuPG` using this command: `gpg --no-symkey-cache -o decrypted.txt -d passwords.pgp.asc` (you will be prompted for your master password).
 
 # Why use password-manager.js
 
