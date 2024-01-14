@@ -7,7 +7,8 @@ Because `password-manager.js` uses [opengpg.js](https://github.com/openpgpjs/ope
 # Why use password-manager.js
 
 - It works on all devices (if they can install a browser).
-- It uses well-established standards: AES-265 and OpenPGP.
+- It uses well-established standards: AES-256 and OpenPGP.
+- It is prepared for the future: AES-256 is considered [quantum resistant](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard#Quantum_attacks).
 - It has a single dependency, which is being actively developed and has been audited for security: [opengpg.js](https://github.com/openpgpjs/openpgpjs).
 - It is simple: 50 lines of Javascript code plus boilerplate HTML and CSS.
 - It is small: 1.5 MB including the non-minified dependency code.
