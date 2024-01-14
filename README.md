@@ -1,6 +1,6 @@
 # Introduction
 
-`password-manager.js` is a minimalistic password manager. It can encrypt and decrypt passwords (or other text) using AES-256. Because it is written in Javascript, the code runs in your browser and does not send your data to any servers! But don't take my word for it: Check the source code! It is only 50 lines long ;) 
+`password-manager.js` is a minimalistic password manager. It can encrypt and decrypt passwords (or other text) using AES-256. Because it is written in Javascript, the code runs in your browser and does not send your data to any servers! But don't take my word for it: Check the source code yourself. It is only 50 lines long ;) 
 
 Because `password-manager.js` uses [opengpg.js](https://github.com/openpgpjs/openpgpjs) under the hood it is compatible with other tools, which support the OpenPGP standard (like [GnuPG](https://www.gnupg.org/)). You can decrypt a file encrypted by `password-manager.js` with `GnuPG` using this command: `gpg --no-symkey-cache -o decrypted.txt -d passwords.pgp.asc` (you will be prompted for your master password).
 
@@ -29,10 +29,16 @@ To read your passwords at a later time:
 3. Type the master password into the password field.
 4. Click "Decrypt".
 
+# Troubleshooting
+
+Some browsers on certain operating systems (e.g. Chrome on Android) will not allow loading Javascript or CSS scripts when the html file is opened from the local storage. Instead, the html file must be served via a web server. Feel free to serve `password-manager.js` from your own web server or use this link: https://pwm.benjamin-portner.de.
+
 # How it works
 
-`password-manager.js` is merely a graphical user interface. All the cryptography is handled by [opengpg.js](https://github.com/openpgpjs/openpgpjs) (which in turn uses the [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API) if your browser is up-to-date). `openpgp.js` is maintained by [Proton Mail](https://proton.me/blog/openpgpjs-email-encryption) and has undergone two security audits. I personally consider it safe for the use case of storing passwords (when using a secure master password!).
+`password-manager.js` is merely a graphical user interface. All the cryptography is handled by [opengpg.js](https://github.com/openpgpjs/openpgpjs) (which in turn uses the [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API) if your browser is not completely out-dated). `openpgp.js` is maintained by [Proton Mail](https://proton.me/blog/openpgpjs-email-encryption) and has undergone two security audits. I personally consider it safe for the use case of storing passwords (when using a secure master password!).
 
 # Disclaimer
 
-This project has not been audited for security. I am not a security researcher and although I am using `password-manager.js` myself, there might be security issues with the code in this project or its dependencies. Make sure to keep a copy of your master password in a secure place. Neither your master password, nor the entered clear text, nor the encrypted data will be sent to any servers. Data WILL be permanently lost if you lose your master password. Use at your own risk!
+This project has not been audited for security. I am not a security researcher and although I am using `password-manager.js` myself, there might be security issues with the code in this project or its dependencies. Use at your own risk! In any case, using `password-manager.js` with an outdated browser is heavily discouraged and can lead to stolen credentials. Keep your browser up to date!
+
+Make sure to keep a copy of your master password in a secure place. Neither your master password, nor the entered clear text, nor the encrypted data will be sent to any servers. Data WILL be permanently lost if you lose your master password. 
