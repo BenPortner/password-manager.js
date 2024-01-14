@@ -19,7 +19,7 @@ Because `password-manager.js` uses [opengpg.js](https://github.com/openpgpjs/ope
 To encrypt your passwords:
 1. Open `index.html`.
 2. Type your passwords (or other text) into the large text box.
-3. Write a secure master password (>22 characters; letters, numbers and symbols) into the password field.
+3. Type a secure master password (>22 characters; letters, numbers and symbols) into the password field.
 4. Click "Encrypt & download".
 5. Store the encrypted file on your computer or anywhere in the cloud.
 
