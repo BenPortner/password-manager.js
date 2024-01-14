@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MyPasswords.js</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="js/openpgp.js"></script>
+</head>
+
+<body>
+    <div>
+        <input type="file" id="in-ciphertext" accept=".pgp.asc" onchange="readArmoredMessage()" autocomplete="off" />
+        <input type="password" id="in-password" placeholder="Enter Password" />
+        <button onclick="decryptArmoredMessage()" id="btn-decrypt">Decrypt</button>
+    </div>
+    <div>
+        <textarea id="in-cleartext" placeholder="Decrypted Text" autocomplete="off"></textarea>
+        <button onclick="encryptClearText()" id="btn-decrypt">Encrypt & download</button>
+    </div>
+</body>
+<script src="js/mypasswords.js"></script>
+
+</html>
