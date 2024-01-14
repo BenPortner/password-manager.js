@@ -1,4 +1,9 @@
+div {
+    padding: 2px;
+}
 #in-cleartext {
-    width: 600px;
-    height: 400px;    
+    width: 90%;
+    min-width: 100px;
+    max-width: 600px;   
+    height: 400px;
 }
